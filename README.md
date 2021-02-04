@@ -1,4 +1,4 @@
 # ProblemSolving
 This repository consists of problems on Data Structures &amp; Algorithms and solutions to them. \
 Choose a branch and head over to the questions and solutions. \
-Codes have run on the interviewBit/Scaler platform.
+Codes have run on the interviewBit platform.
