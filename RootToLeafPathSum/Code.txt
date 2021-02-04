@@ -1,0 +1,32 @@
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) {
+ *      val = x;
+ *      left=null;
+ *      right=null;
+ *     }
+ * }
+ */
+public class Solution {
+    boolean checkPathSum(TreeNode A, int B) {
+        if(A == null)
+            return false;
+        else if(A.left == null && A.right == null && (B - A.val == 0)) {
+            //System.out.println(" B = " + B + " A.val = " + A.val);
+            return true;
+        }
+        else if(checkPathSum(A.left, B - A.val) == true || checkPathSum(A.right, B - A.val) == true)
+            return true;
+        return false;
+    }
+    public int hasPathSum(TreeNode A, int B) {
+        if(checkPathSum(A, B))
+            return 1;
+        else
+            return 0;
+    }
+}
